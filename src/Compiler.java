@@ -8,9 +8,9 @@ import java.util.Arrays;
 import java.util.List;
 
 /*
-Abd Alftah Salem : 20191758
-Saed afif        : 20191748
-Maslama Al Zwbda : 20191403
+Abd Alftah Nedal Salem : 20191758
+Saed mohamed afif        : 20191748
+Maslama Alaa Al Zebda : 20191403
 */
 public class Compiler {
     private static final String FILE_PATH = "program_test.txt";
