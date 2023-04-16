@@ -13,7 +13,7 @@ Saed mohamed afif        : 20191748
 Maslama Alaa Al Zebda : 20191403
 */
 public class Compiler {
-    private static final String FILE_PATH = "program_test.txt";
+    private static final String FILE_PATH = "p.txt";
     private static final List<String> KEYWORDS = Arrays.asList(
             "-", "(", ")", ",", "*", ".", "..", "/", ":", ":=", ";", "[", "]", "+",
             "<", "<=", ">", "=", "<>", ">=", "ARRAY", "AND", "BEGIN", "BOOLEAN",
@@ -76,7 +76,7 @@ public class Compiler {
     }
 
     private static void displayTokensInTable(List<Token> tokens) {
-        String[] columnNames = {"#Number", "Tokens", "Type Token"};
+        String[] columnNames = {"Name", "Type", "Line No"};
         String[][] data = new String[tokens.size()][3];
 
         for (int i = 0; i < tokens.size(); i++) {
