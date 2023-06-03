@@ -75,7 +75,7 @@ public class Compiler {
         return codeLineList;
     }
 
-    private static void displayTokensInTable(List<Token> tokens) {
+    private static void showTokensInTable(List<Token> tokens) {
         String[] columnNames = {"Name", "Type", "Line No"};
         String[][] data = new String[tokens.size()][3];
 
@@ -95,9 +95,14 @@ public class Compiler {
         frame.setVisible(true);
     }
 
+    public static void showPascalGrammarError(List<Token> tokens) {
+        PascalGrammar pascalGrammar = new PascalGrammar(tokens);
+        JOptionPane.showMessageDialog(null, pascalGrammar.error);
+    }
+
     public static void main(String[] args) throws IOException {
         List<Token> tokens = getListOfToken(readCodeFromFile());
-
-        displayTokensInTable(tokens);
+        showPascalGrammarError(tokens);
+        showTokensInTable(tokens);
     }
 }
